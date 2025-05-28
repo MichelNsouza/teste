@@ -1,4 +1,4 @@
-const url = 'https://www.unifucamp.edu.br/wp-content/uploads/2020/09/Livros-gra%CC%81tis.pdf'; // Substitua pelo caminho do seu PDF
+const url = './pdf/revista.pdf'; // Substitua pelo caminho do seu PDF
 
 let pdfDoc = null,
     pageNum = 1,
