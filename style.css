@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.flipbook-container {
+    width: 80%; /* Ajuste conforme necessário */
+    max-width: 800px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#pdf-canvas {
+    border: 1px solid #aaa;
+    margin-bottom: 10px;
+    width: 100%; /* Garante que o canvas preencha o contêiner */
+    height: auto; /* Ajusta a altura proporcionalmente */
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.navigation button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.navigation button:hover {
+    background-color: #3e8e41;
+}
+
+#page-num {
+    font-size: 16px;
+}

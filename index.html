@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipbook PDF</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body>
+    <div class="flipbook-container">
+        <canvas id="pdf-canvas"></canvas>
+        <div class="navigation">
+            <button id="prev-page">Anterior</button>
+            <button id="next-page">Próxima</button>
+            <span id="page-num">Página: 1</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
