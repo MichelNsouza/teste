@@ -1,50 +1,55 @@
-body {
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>revista politica da farmacia popular</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Estilos adicionais -->
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+    .flipbook-container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #pdf-canvas {
+      border: 1px solid #dee2e6;
+      max-width: 100%;
+      height: auto;
+    }
+    .navigation {
+      margin-top: 20px;
+    }
+  </style>
 
-.flipbook-container {
-    width: 80%; /* Ajuste conforme necessário */
-    max-width: 800px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body>
 
-#pdf-canvas {
-    border: 1px solid #aaa;
-    margin-bottom: 10px;
-    width: 100%; /* Garante que o canvas preencha o contêiner */
-    height: auto; /* Ajusta a altura proporcionalmente */
-}
+  <div class="container-fluid flipbook-container text-center">
+    <canvas id="pdf-canvas"></canvas>
+    <div class="navigation mt-3">
+      <button id="prev-page" class="btn btn-primary me-2">Anterior</button>
+      <button id="next-page" class="btn btn-primary ms-2">Próxima</button>
+      <div class="mt-2">
+        <span id="page-num" class="badge bg-secondary">Página: 1</span>
+      </div>
+    </div>
+  </div>
 
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-}
+  <!-- Script PDF -->
+  <script src="script.js"></script>
 
-.navigation button {
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.navigation button:hover {
-    background-color: #3e8e41;
-}
-
-#page-num {
-    font-size: 16px;
-}
+</body>
+</html>
